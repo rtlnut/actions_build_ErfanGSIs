@@ -56,7 +56,6 @@ jobs:
          run: |
               cd $GITHUB_WORKSPACE/ErfanGSIs
               mkdir ./output
-              sudo bash ./setup.sh
        
        - name: Download Stock Rom & Generate GSI
          run: |
