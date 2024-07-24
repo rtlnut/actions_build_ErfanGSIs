@@ -25,9 +25,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
-       - name: Setup Python
-         uses: actions/setup-python@v5.1.1
-            
+       - uses: actions/setup-python@v5.1.1
        - name: Checkout
          uses: actions/checkout@master
            
