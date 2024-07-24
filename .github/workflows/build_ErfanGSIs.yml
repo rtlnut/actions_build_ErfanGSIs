@@ -31,6 +31,14 @@ jobs:
            python-version: '3.10' 
        - name: Checkout
          uses: actions/checkout@master
+
+       - uses: actions/setup-python@v1
+                BSFishy/pip-action@v1
+         with:
+           packages: |
+             backports.lzma
+             protobuf
+             pycrypto
            
        - name: Initialization environment
          run: |
@@ -43,14 +51,6 @@ jobs:
          run: |
               sed -i 's/\|\| exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
               sed -i 's/exit 1//g' $GITHUB_WORKSPACE/ErfanGSIs/url2GSI.sh
-
-       - uses: actions/setup-python@v1
-                BSFishy/pip-action@v1
-         with:
-           packages: |
-             backports.lzma
-             protobuf
-             pycrypto
              
        - name: Setting up ErfanGSI requirements
          run: |
